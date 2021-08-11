@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th ="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom styles for this template-->
+    <link href="../../static/css/user.css" th:href="@{/css/user.css}" rel="stylesheet">
+
+</head>
+<body>
+<div id="container">
+    <div id="content">
+        <div id="user">
+            <form id="login-form" name="loginform" method="post" th:action="@{/login}">
+                <label class="block-label" for="email">이메일</label>
+                <input id="email" name="username" type="text" value="">
+                <label class="block-label" >패스워드</label>
+                <input name="password" type="password" value="">
+
+                <input type="submit" value="로그인">
+
+                <a th:href="@{/user/join}">회원가입</a>
+                <br>
+                <a th:href="@{/user/search}">ID/PW찾기</a>
+                <br>
+                <a th:href="@{/user/unlogin}">비회원 로그인</a>
+            </form>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
